@@ -5,21 +5,21 @@
 class GateCli < Formula
   desc "Gate CLI - command-line interface for Gate"
   homepage "https://www.gate.com"
-  version "0.5.3"
+  version "0.5.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/gate/gate-cli/releases/download/v0.5.3/gate-cli_0.5.3_darwin_amd64.tar.gz"
-      sha256 "23d40b1b52231b07d46b90055d7bd408ef99f83e6e08eccad3b8a28b0945bf45"
+      url "https://github.com/gate/gate-cli/releases/download/v0.5.4/gate-cli_0.5.4_darwin_amd64.tar.gz"
+      sha256 "687dab29a6072d47cc8d48091c5dc2f963ac068703c4f5909e2a6979087bba54"
 
       define_method(:install) do
         bin.install "gate-cli"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/gate/gate-cli/releases/download/v0.5.3/gate-cli_0.5.3_darwin_arm64.tar.gz"
-      sha256 "0c4fa2c9d74c706b92fd6a5417c7e7a9123c9907ead5c6e3443f08766289fd1d"
+      url "https://github.com/gate/gate-cli/releases/download/v0.5.4/gate-cli_0.5.4_darwin_arm64.tar.gz"
+      sha256 "9bb54d2bfec38967cf48949acfb075886bcd17976134c681843a8a6f594c1fe5"
 
       define_method(:install) do
         bin.install "gate-cli"
@@ -29,15 +29,15 @@ class GateCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gate/gate-cli/releases/download/v0.5.3/gate-cli_0.5.3_linux_amd64.tar.gz"
-      sha256 "9c44d628a1e942d575719a49a40a4802e0dce535d6f24c93bd6d6e1d80b4282e"
+      url "https://github.com/gate/gate-cli/releases/download/v0.5.4/gate-cli_0.5.4_linux_amd64.tar.gz"
+      sha256 "17ad38d50d766f78591ec15f7342364618128d297e038932d26c4771e1da6633"
       define_method(:install) do
         bin.install "gate-cli"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gate/gate-cli/releases/download/v0.5.3/gate-cli_0.5.3_linux_arm64.tar.gz"
-      sha256 "d539f2fa88f8be90573211d93964e452f0b2d133f29419b8b2cd1b57e4762d40"
+      url "https://github.com/gate/gate-cli/releases/download/v0.5.4/gate-cli_0.5.4_linux_arm64.tar.gz"
+      sha256 "b0f032431a81bc20d409f6e8a9bb23de2e4363cf824ace414909d1b0790cd3a9"
       define_method(:install) do
         bin.install "gate-cli"
       end
